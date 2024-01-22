@@ -1,0 +1,203 @@
+// /*FONTS--------------------------------------------------------------------*/
+
+/*Caviar Dreams*/
+@font-face {
+	font-family: 'Oswald';
+	src: url("../fonts/Oswald-VariableFont_wght.ttf");
+}
+
+// /*Satisfy*/
+// @font-face {
+//     font-family: 'Satisfy';
+//     src:url("../fonts/Satisfy-Regular.ttf")
+// }
+
+/*VARIABLES--------------------------------------------------------------*/
+
+// /*couleurs*/
+// $gold: #e8e0c6;
+// $light-gold:#f0ebdb;
+// $blue-purple:#2c2d6f;
+$default-text-color:#000;
+
+// /*width*/
+// $maxWidth: 100%;
+
+// /*MIXINS----------------------------------------------------------------------*/
+
+// /*outline*/
+// @mixin outline {
+//     outline: 2px solid #2c2f66;
+// }
+
+// /*borders*/
+// @mixin border {
+//     border : 2px solid $gold;
+//     box-sizing:border-box;
+// }
+
+// @mixin bottom__border {
+//     border-bottom: 2px solid $gold;
+// }
+
+// /*shadows*/
+// @mixin shadow {
+//     box-shadow:0 0 5px rgba(0,0,0, .7);
+// }
+
+// /*chief__photos*/
+// @mixin chief__photo__border {
+//     border-bottom : 2px solid $gold;
+//     box-shadow: 0 0 5px  rgba(0,0,0, .7);
+// }
+
+// /*BOUTONS------------------------------------------*/
+
+// /*global*/
+// .button {
+//     background-color:$blue-purple;
+//     color : $gold;
+//     border: 2px solid $gold;
+//     box-sizing:border-box;
+//     font-size:1rem;
+//     padding:1rem;
+//     border-radius:10px;
+//     text-transform:uppercase;
+//     font-weight:bold;
+    
+//     &:hover {
+//         cursor:pointer;
+//          filter:brightness(1.2);
+//     }
+    
+//     /*bouton pour soumettre les formulaires*/
+//     .form__button {
+//         width:auto;
+//     }
+// }
+
+
+/*LIENS------------------------------------------------*/
+
+a {
+    text-decoration:none;
+    color: $default-text-color;
+}
+
+// /*liens qui ont le même style que les boutons*/
+// .button__link{
+//     display:inline-block;
+// }
+
+// /*bouton "réserver une prestation" placé tout à la fin de la nav burger*/
+// .booking__burger__nav__button {
+//         width:auto;
+//         margin: 1rem 0 0 .5rem;
+// }
+
+/*ALL (html, body)------------------------------------------------------------*/
+
+* {
+    margin:0;
+    padding: 0; 
+}
+
+html {
+    scroll-behavior: smooth;
+    
+    body{
+        font-family: 'Oswald';
+        grid-template-rows: 200px auto 1fr auto;
+        background-color: #fff;
+        display: grid;
+        min-height: 100vh;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+
+        .to__top {
+
+            position:fixed;
+            bottom:16px;
+            right:32px;
+            width:50px;
+            height:50px;
+            font-size:1.5rem;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            opacity:0;
+            pointer-events:none;
+            transition:all .4s;
+            
+            &.active {
+                bottom:150px;
+                pointer-events:auto;
+                opacity:1;
+            }
+        }
+
+        
+    }
+}
+
+header {
+    grid-row: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #000;
+
+    i {
+        cursor:pointer;
+        font-size: 2rem;
+    }
+}
+
+nav {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;  
+    transition: height 1s, opacity 1s;
+
+
+    &.display__nav {
+        display: flex;
+        overflow-y: hidden;
+        height: 20rem;
+        opacity: 1;
+    }
+
+    ul {
+        margin: 2rem;
+        list-style: none;
+        li {
+            .nav__icon__link__wrapper {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                i {
+                    font-size: 1rem;
+                    width: 2rem;
+                    height: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                }
+
+                a {
+
+                }
+            }
+        }
+    }
+}
+
+/*USER SPACE*/
+.avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}

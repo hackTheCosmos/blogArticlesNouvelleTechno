@@ -1,5 +1,5 @@
         <footer>
-            <p>&copy; 2023</p>
+            <p>&copy; <?=date('Y')?></p>
         </footer>
     </body>
 </html>

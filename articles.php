@@ -1,4 +1,5 @@
 <?php
+session_start();
 
     //on va chercher les articles dans la base de données
     // on se connecte à la base de données

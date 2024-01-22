@@ -1,4 +1,5 @@
 <?php
+session_start();
 
     // on vérifie si on a un id d'article dans l'url avec la méthode GET
     if(!isset($_GET['id']) || empty($_GET['id'])) {
